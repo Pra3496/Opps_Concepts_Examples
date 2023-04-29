@@ -17,7 +17,8 @@
                 Console.WriteLine("1  : Class And Methods");
                 Console.WriteLine("2  : Interface");
                 Console.WriteLine("3  : Encapsulation");
-                Console.WriteLine("3  : Abstraction with abstract class");
+                Console.WriteLine("4  : Abstraction with abstract class");
+                Console.WriteLine("5  : Abstraction with Interface");
                 Console.WriteLine("0  : EXIT");
                 Console.WriteLine("\n===========================================\n");
                 Console.Write("ENTER YOUR CHOICE : ");
@@ -86,6 +87,31 @@
 
                         Console.WriteLine("{0}", result);
 
+
+                        Console.Write("Press any key....");
+                        Console.ReadKey();
+                        break;
+                    case 5:
+                        Console.WriteLine("\n-------{ Abstraction with Interface }--------");
+
+                        // creating an instance of Bicycle 
+                        // doing some operations 
+                        Bicycle bicycle = new Bicycle();
+                        bicycle.changeGear(2);
+                        bicycle.speedUp(3);
+                        bicycle.applyBrakes(1);
+
+                        Console.WriteLine("Bicycle present state :");
+                        bicycle.printStates();
+
+                        // creating instance of bike.
+                        Bike bike = new Bike();
+                        bike.changeGear(1);
+                        bike.speedUp(4);
+                        bike.applyBrakes(3);
+
+                        Console.WriteLine("Bike present state :");
+                        bike.printStates();
 
                         Console.Write("Press any key....");
                         Console.ReadKey();
