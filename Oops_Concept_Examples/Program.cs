@@ -170,6 +170,30 @@ namespace Oops_Concept_Examples
                         Console.Write("Press any key....");
                         Console.ReadKey();
                         break;
+                    case 8:
+                        Console.WriteLine("\n-------{ Refrances }--------");
+
+                        int Number = 0;
+
+                        int i = 0; //use ref to pass the parameter by reference 
+
+                        Console.WriteLine("Table of 2");
+                        while ( i < 10)
+                        {
+                            Refrances.ProcessNumber(ref Number);
+
+                            Console.WriteLine(Number);
+
+                            i++;
+                        }
+
+                        
+
+
+
+                        Console.Write("Press any key....");
+                        Console.ReadKey();
+                        break;
                     case 0:
                         Console.Write("Thank you For Using Application....");
                         flag = false;   
