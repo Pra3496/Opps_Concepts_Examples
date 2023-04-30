@@ -15,14 +15,13 @@ namespace Oops_Concept_Examples
     public class Dog
     {
         // Instance Variables
-        String name;
-        String breed;
+        string name;
+        string breed;
         int age;
-        String color;
+        string color;
 
         // Constructor Declaration of Class
-        public Dog(String name, String breed,
-                      int age, String color)
+        public Dog(string name, string breed, int age, string color)
         {
             this.name = name;
             this.breed = breed;

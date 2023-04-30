@@ -1,4 +1,6 @@
-﻿namespace Oops_Concept_Examples
+﻿using static Oops_Concept_Examples.TestOverride;
+
+namespace Oops_Concept_Examples
 {
     internal class Program
     {
@@ -19,6 +21,7 @@
                 Console.WriteLine("3  : Encapsulation");
                 Console.WriteLine("4  : Abstraction with abstract class");
                 Console.WriteLine("5  : Abstraction with Interface");
+                Console.WriteLine("6  : Polymorphism with Method Overloading");
                 Console.WriteLine("0  : EXIT");
                 Console.WriteLine("\n===========================================\n");
                 Console.Write("ENTER YOUR CHOICE : ");
@@ -65,6 +68,8 @@
                         break;
                     case 3:
                         Console.WriteLine("\n-------{ Encapsulation }--------");
+
+
                         BankAccount myAccount = new BankAccount(1000);
 
                         myAccount.Deposit(500);
@@ -72,6 +77,9 @@
 
                         myAccount.Withdraw(1200);
                         Console.WriteLine("Balance: "+ myAccount.GetBalance());
+
+
+
                         Console.Write("Press any key....");
                         Console.ReadKey();
                         break;
@@ -86,6 +94,8 @@
                         double result = sh.area();
 
                         Console.WriteLine("{0}", result);
+
+
 
 
                         Console.Write("Press any key....");
@@ -112,6 +122,50 @@
 
                         Console.WriteLine("Bike present state :");
                         bike.printStates();
+
+
+
+                        Console.Write("Press any key....");
+                        Console.ReadKey();
+                        break;
+                    case 6:
+                        Console.WriteLine("\n-------{ Polymorphism with Method Overloading }--------");
+
+                        MethodOverloading methodOverloading = new MethodOverloading();
+
+                        Console.WriteLine("\noverloading by changing the Number of parameters\n");
+                        int sum1 = methodOverloading.Add(1, 2);
+                        Console.WriteLine("sum of the two " + "integer value : " + sum1);
+
+                        int sum2 = methodOverloading.Add(1, 2, 3);
+                        Console.WriteLine("sum of the three "+ "integer value : " + sum2);
+
+
+                        Console.WriteLine("\nOverloading by changing the Data types of the parameters\n");
+
+                        double sum3 = methodOverloading.Add(1.0, 2.0, 3.0);
+                        Console.WriteLine("sum of the three " + "double value : " + sum3);
+
+                        Console.WriteLine("\nOverloading by changing the order of the parameters\n");
+
+                        methodOverloading.Identity("Pranav",25);
+
+                        methodOverloading.Identity(25,"Pranav");
+
+                        Console.Write("Press any key....");
+                        Console.ReadKey();
+                        break;
+
+                    case 7:
+                        Console.WriteLine("\n-------{ Polymorphism Method overriding }--------");
+
+
+                        var employee1 = new SalesEmployee("Pranav", 1000, 500);
+                        var employee2 = new Employee("piyush", 1200);
+
+                        Console.WriteLine("Employee1 {0} earned: {1}",employee1.Name, employee1.CalculatePay());
+                        Console.WriteLine("Employee2 {0} earned: {1}", employee2.Name, employee2.CalculatePay());
+
 
                         Console.Write("Press any key....");
                         Console.ReadKey();
