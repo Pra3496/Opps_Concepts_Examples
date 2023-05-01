@@ -22,9 +22,11 @@ namespace Oops_Concept_Examples
        
 
         // all are the abstract methods.
-        void changeGear(int a);
-        void speedUp(int a);
-        void applyBrakes(int a);
+        void changeGear();
+        void speedUp();
+        void applyBrakes();
+
+        
     }
 
     // class implements interface
@@ -67,24 +69,24 @@ namespace Oops_Concept_Examples
 
 
         // to change gear
-        public void changeGear(int newGear)
+        public void changeGear()
         {
 
-            gear = newGear;
+            gear++;
         }
 
         // to increase speed
-        public void speedUp(int increment)
+        public void speedUp()
         {
 
-            speed = speed + increment;
+            speed++;
         }
 
         // to decrease speed
-        public void applyBrakes(int decrement)
+        public void applyBrakes()
         {
 
-            speed = speed - decrement;
+            speed = 0;
         }
 
         public void printStates()
@@ -128,24 +130,24 @@ namespace Oops_Concept_Examples
         }
 
         // to change gear
-        public void changeGear(int newGear)
+        public void changeGear()
         {
 
-            gear = newGear;
+            gear++;
         }
 
         // to increase speed
-        public void speedUp(int increment)
+        public void speedUp()
         {
 
-            speed = speed + increment;
+            speed++;
         }
 
         // to decrease speed
-        public void applyBrakes(int decrement)
+        public void applyBrakes()
         {
 
-            speed = speed - decrement;
+            speed = 0;
         }
 
         public void printStates()

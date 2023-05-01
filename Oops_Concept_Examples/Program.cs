@@ -22,6 +22,8 @@ namespace Oops_Concept_Examples
                 Console.WriteLine("4  : Abstraction with abstract class");
                 Console.WriteLine("5  : Abstraction with Interface");
                 Console.WriteLine("6  : Polymorphism with Method Overloading");
+                Console.WriteLine("7  : Polymorphism with Method Overriding");
+                Console.WriteLine("8  : Refrences");
                 Console.WriteLine("0  : EXIT");
                 Console.WriteLine("\n===========================================\n");
                 Console.Write("ENTER YOUR CHOICE : ");
@@ -107,18 +109,18 @@ namespace Oops_Concept_Examples
                         // creating an instance of Bicycle 
                         // doing some operations 
                         Bicycle bicycle = new Bicycle();
-                        bicycle.changeGear(2);
-                        bicycle.speedUp(3);
-                        bicycle.applyBrakes(1);
+                        bicycle.changeGear();
+                        bicycle.speedUp();
+                        bicycle.applyBrakes();
 
                         Console.WriteLine("Bicycle present state :");
                         bicycle.printStates();
 
                         // creating instance of bike.
                         Bike bike = new Bike();
-                        bike.changeGear(1);
-                        bike.speedUp(4);
-                        bike.applyBrakes(3);
+                        bike.changeGear();
+                        bike.speedUp();
+                        bike.applyBrakes();
 
                         Console.WriteLine("Bike present state :");
                         bike.printStates();
@@ -187,8 +189,20 @@ namespace Oops_Concept_Examples
                             i++;
                         }
 
-                        
 
+                        Console.Write("Press any key....");
+                        Console.ReadKey();
+                        break;
+                    case 9:
+                        Console.WriteLine("\n-------{ Constructor and Types }--------");
+                        
+                        MyConstructor defaultConstructor = new MyConstructor();
+
+                        MyConstructor parameteriezedConstructor = new MyConstructor("pranav",121,9736111);
+
+                        ConstructorTwo model = new ConstructorTwo("1999",34);
+
+                        ConstructorTwo copyConstructor = new ConstructorTwo(model);
 
 
                         Console.Write("Press any key....");
